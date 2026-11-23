@@ -3,23 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cycle TMS — Transportation system for motor carriers</title>
-  <meta
-    name="description"
-    content="Cycle TMS is a transportation management system for motor carriers. Unique implements it in the client’s operation. In service since 2018."
-  />
-  <meta property="og:title" content="Cycle TMS — Run the carrier from one system" />
-  <meta
-    property="og:description"
-    content="Owners, trucks, drivers, orders, documents, and invoices in one English system. Implemented for the carrier. In service since 2018."
-  />
+  <title>Cycle TMS — Run the carrier from one system</title>
+  <meta name="description" content="Cycle TMS is the operating system for a motor carrier. Live fleet, dispatch intelligence, documents, and invoices. Implemented in your operation." />
+  <meta property="og:title" content="Cycle TMS — Every truck. One system." />
+  <meta property="og:description" content="A transportation system for motor carriers. In service since 2018. Designed by Andrii Karpachov and his team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tms.cycletiger.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://tms.cycletiger.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
   <script type="application/ld+json">
     {
@@ -46,228 +37,177 @@
   </script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="gradient-bg" aria-hidden="true"></div>
   <a class="sr-only" href="#main">Skip to content</a>
-
-  <header class="site-header">
+  <header class="site-header" data-header>
     <div class="wrap site-header__inner">
       <a class="logo" href="index.html" aria-label="Cycle TMS home">
-        <span class="logo-type">
-          <span class="logo-line1"><span class="logo-cycle">Cycle</span><span class="logo-mark">TMS</span></span>
-          <span class="logo-tag">FOR CARRIERS</span>
-        </span>
+        <span class="logo-line1"><span class="logo-cycle">Cycle</span><span class="logo-mark">TMS</span></span>
       </a>
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
         <span></span>
         <span class="sr-only">Menu</span>
       </button>
       <nav class="nav-links" id="site-nav" data-nav-drawer aria-label="Main">
-        <a href="#system">System</a>
-        <a href="#load">A load</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#order">Order</a>
+        <a href="#intelligence">Intelligence</a>
         <a href="#implementation">Implementation</a>
-        <a href="#work">The work</a>
         <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div>
-        <p class="badge">In service since 2018</p>
-        <h1 id="hero-title">Run the carrier from one system.</h1>
-        <p class="hero-lead">
-          Cycle TMS is the operating system for a motor carrier. Owners, trucks, drivers, brokers, orders, documents, and invoices stay on one record.
-        </p>
-        <p class="hero-lead">
-          Unique supplies the system and implements it in the client’s operation. The screens are in English. A price is written after we see how that carrier dispatches, not before.
-        </p>
-        <div class="hero-ctas">
-          <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
-          <a class="btn btn-ghost" href="#system">See the system</a>
-        </div>
-        <p class="fine">Implementation takes one to three months. The length follows the scope of the project.</p>
-      </div>
-
-      <article class="board" aria-label="Illustration of what one order holds">
-        <div class="board-top">
-          <span>One order</span>
-          <span class="board-live">Illustration</span>
-        </div>
-        <div class="board-body">
-          <div class="lane">
-            <div>
-              <strong>Pickup → delivery</strong>
-              <span>Broker, stops, dates, freight, miles</span>
-            </div>
-            <div class="order-no">
-              Status<br />
-              <b>On route</b>
-            </div>
-          </div>
-          <div class="rail" aria-hidden="true">
-            <i class="is-done"></i>
-            <i class="is-done"></i>
-            <i class="is-done"></i>
-            <i class="is-now"></i>
-          </div>
-          <p class="rail-label">The truck follows the order · <b>On route to the consignee</b></p>
-          <div class="facts">
-            <div class="fact"><small>Truck</small><b>Assigned</b></div>
-            <div class="fact"><small>Driver</small><b>On that truck</b></div>
-            <div class="fact"><small>Papers</small><b>BOL and POD</b></div>
-            <div class="fact"><small>Money</small><b>Invoice open</b></div>
-          </div>
-        </div>
-        <div class="board-foot">A status out of sequence does not save. The truck’s availability changes with the order.</div>
-      </article>
-    </section>
-
-    <section aria-label="What changes when the carrier runs on Cycle">
-      <div class="wrap outcomes">
-        <article>
-          <strong>Manageability</strong>
-          <span>The office can see who is free, who is under a load, and who changed a status.</span>
-        </article>
-        <article>
-          <strong>Transparency</strong>
-          <span>The rate, the driver settlement, and the broker sit on the same order.</span>
-        </article>
-        <article>
-          <strong>Monitoring</strong>
-          <span>Location stays with the trip: the carrier’s own point, Google, or Macropoint.</span>
-        </article>
-        <article>
-          <strong>Control</strong>
-          <span>A status out of sequence does not save. The invoice closes on the same order.</span>
-        </article>
+    <section class="hero wrap">
+      <p class="eyebrow">In service since 2018</p>
+      <h1>Every truck. One system.</h1>
+      <p class="hero-lead">Cycle TMS is the live operating record of a motor carrier. Owners, loads, documents, and invoices stay together. Unique implements it in your office.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
+        <a class="btn btn-ghost" href="#fleet">See the system</a>
       </div>
     </section>
 
-    <section id="system" aria-labelledby="system-title">
+    <figure class="stage">
+      <video autoplay muted loop playsinline poster="assets/hero-truck.jpg">
+        <source src="assets/hero-road.mp4" type="video/mp4" />
+      </video>
+    </figure>
+    <p class="fine wrap">Real-time control for the people who dispatch the trucks.</p>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span><b>Manageability</b></span><span>Transparency</span><span><b>Monitoring</b></span><span>Control</span><span>Live board</span><span><b>Dispatch intelligence</b></span>
+        <span><b>Manageability</b></span><span>Transparency</span><span><b>Monitoring</b></span><span>Control</span><span>Live board</span><span><b>Dispatch intelligence</b></span>
+      </div>
+    </div>
+
+    <section id="fleet">
+      <div class="wrap chapter reveal">
+        <div class="copy">
+          <p class="kicker">Live fleet</p>
+          <h2>Who can take the next load.</h2>
+          <p>An owner holds the trucks. A driver is tied to a truck. The record keeps type, size, capacity, plate, and the day insurance and the license expire.</p>
+          <p>Each morning the board is known. A truck is available, on route, not available, or held until a date. Every change keeps who set it, and when.</p>
+        </div>
+        <figure class="frame">
+          <img src="assets/hero-truck.jpg" alt="A white tractor on an open lot at dawn" width="1280" height="720" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="order">
       <div class="wrap">
-        <h2 class="section-title" id="system-title">What the office works in</h2>
-        <p class="section-sub">
-          Cycle TMS is the carrier’s own system, in English, stood up in that company’s operation.
-        </p>
-        <div class="features">
-          <article class="card reveal">
-            <div class="feature-num">01</div>
-            <h3>Owner, truck, driver</h3>
-            <p>An owner holds trucks. A driver is tied to a truck. The record keeps type, size, capacity, plate, and the dates insurance and the license expire.</p>
-          </article>
-          <article class="card reveal">
-            <div class="feature-num">02</div>
-            <h3>Who can take a load</h3>
-            <p>A truck is Available, On route, Not available, or held until a date. The morning starts from a known board. Each change keeps who set it and when.</p>
-          </article>
-          <article class="card reveal">
-            <div class="feature-num">03</div>
-            <h3>A truck near the pickup</h3>
-            <p>Dispatch enters the pickup ZIP and a distance. Cycle lists available trucks inside that radius, with the driver and the owner on the same line.</p>
-          </article>
-          <article class="card reveal">
-            <div class="feature-num">04</div>
-            <h3>Brokers and stops</h3>
-            <p>Shippers, consignees, and brokers live in one book, with address, contact, and MC number. The order pulls the stop from that book.</p>
-          </article>
-          <article class="card reveal">
-            <div class="feature-num">05</div>
-            <h3>The order</h3>
-            <p>Broker, truck, driver, pickup, delivery, dates, freight, miles, the amount of the order, and what the driver is paid. Profit is the difference, on that order.</p>
-          </article>
-          <article class="card reveal">
-            <div class="feature-num">06</div>
-            <h3>Papers, then the invoice</h3>
-            <p>The bill of lading and the proof of delivery are filed on the order. The invoice is raised from that order, with amount, due date, and Paid or Not paid.</p>
-          </article>
+        <div class="band reveal">
+          <div>
+            <p class="kicker">One order</p>
+            <h2>The trip, the paper, and the money.</h2>
+            <p>Broker, pickup, delivery, miles, the amount of the order, and what the driver is paid sit on the same document. A status that skips a step does not save. The truck’s availability moves with the order.</p>
+          </div>
+          <div class="tiles">
+            <article class="tile"><strong>Broker and stops</strong><span>Shipper, consignee, address, contact, and MC number, pulled onto the order.</span></article>
+            <article class="tile"><strong>BOL and POD</strong><span>The bill of lading and the proof of delivery are filed on that trip.</span></article>
+            <article class="tile"><strong>Invoice</strong><span>Raised from the order. Amount, due date, paid or not paid.</span></article>
+            <article class="tile"><strong>Settlement</strong><span>Driver pay stays next to the rate. Profit is the difference on the order.</span></article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="load" aria-labelledby="load-title">
-      <div class="wrap path">
-        <div class="path-copy">
-          <h2 id="load-title">The load has an order of steps</h2>
-          <p>
-            Dispatch moves the order along a fixed path. A step that skips the sequence is rejected. The truck’s status moves with it: on route while the freight is moving, not available once the truck has arrived to the consignee.
-          </p>
-          <p style="margin-top:0.75rem">
-            After delivery, the same order becomes an invoice. When the money is in, the order is paid. The trip and the receivable are not two files.
-          </p>
+    <section>
+      <div class="wrap chapter reverse reveal">
+        <div class="copy">
+          <p class="kicker">Documents to cash</p>
+          <h2>From the signed paper to paid.</h2>
+          <p>When the freight is on the truck, the bill of lading is attached. At delivery, proof of delivery follows. The invoice is filled from the order and starts as not paid.</p>
+          <p>When the money is in, the order is paid. The trip and the receivable are one number.</p>
         </div>
-        <ol class="steps">
-          <li class="reveal"><span class="step-no">1</span><div><b>Created</b><span>The order is opened on an available truck. The driver on that truck comes with it.</span></div></li>
-          <li class="reveal"><span class="step-no">2</span><div><b>To the shipper</b><span>On route, then arrived. The bill of lading is attached here.</span></div></li>
-          <li class="reveal"><span class="step-no">3</span><div><b>To the consignee</b><span>On route, then arrived. Proof of delivery is attached to this order.</span></div></li>
-          <li class="reveal"><span class="step-no">4</span><div><b>Invoice issued</b><span>The invoice is filled from the order. Status starts as not paid.</span></div></li>
-          <li class="reveal"><span class="step-no">5</span><div><b>Order paid</b><span>The receivable closes on the same number as the trip.</span></div></li>
+        <figure class="frame">
+          <img src="assets/papers.jpg" alt="Two blank sheets and a pen on a stone surface" width="1280" height="720" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="intelligence">
+      <div class="wrap chapter reveal">
+        <div class="copy">
+          <p class="kicker">Dispatch intelligence</p>
+          <h2>The closest truck that is actually free.</h2>
+          <p>Dispatch enters a pickup ZIP and a distance. Cycle calculates which available trucks sit inside that radius and lines up the driver and the owner with them.</p>
+          <p>Location stays on the trip: the carrier’s own point, a Google link, or Macropoint. The desk watches the load instead of calling for it.</p>
+        </div>
+        <figure class="frame">
+          <img src="assets/route-line.jpg" alt="A single route drawn between two points on a quiet map" width="1280" height="720" />
+        </figure>
+      </div>
+    </section>
+
+    <section id="load">
+      <div class="wrap">
+        <div class="center-copy reveal">
+          <p class="kicker">The path</p>
+          <h2>Five steps. No skipping.</h2>
+          <p>The order moves in sequence. The truck goes on route with the freight and drops to not available once it has arrived to the consignee.</p>
+        </div>
+        <ol class="flow" data-flow>
+          <li><span class="n">01</span><strong>Created</strong><span>Opened on an available truck. The driver comes with it.</span></li>
+          <li><span class="n">02</span><strong>To the shipper</strong><span>On route, then arrived. The bill of lading is attached.</span></li>
+          <li><span class="n">03</span><strong>To the consignee</strong><span>On route, then arrived. Proof of delivery is attached.</span></li>
+          <li><span class="n">04</span><strong>Invoice issued</strong><span>Filled from the order. Status starts unpaid.</span></li>
+          <li><span class="n">05</span><strong>Order paid</strong><span>The receivable closes on the same trip.</span></li>
         </ol>
       </div>
     </section>
 
-    <section id="implementation" aria-labelledby="impl-title">
+    <section id="implementation">
       <div class="wrap">
-        <h2 class="section-title" id="impl-title">Sold as a system, stood up in your office</h2>
-        <p class="section-sub">
-          The engagement is the software and the implementation. Scope sets the calendar. One month is the short end. Three months is the long end.
-        </p>
-        <div class="cards cards--3">
+        <div class="center-copy reveal">
+          <p class="kicker">Implementation</p>
+          <h2>Stood up in your office.</h2>
+          <p>The engagement is the system and the work of putting it in. One to three months, set by the scope. The screens are in English. A proposal is written after we see how you dispatch.</p>
+        </div>
+        <div class="cards">
           <article class="card reveal">
-            <div class="feature-num">01</div>
-            <h3>We learn the operation</h3>
-            <p>How loads arrive, how trucks are chosen, how paper and money move today. That review is what the commercial proposal is built from.</p>
+            <div class="num">01</div>
+            <h3>The operation</h3>
+            <p>How a load arrives, how a truck is chosen, how paper and money move today.</p>
           </article>
           <article class="card reveal">
-            <div class="feature-num">02</div>
-            <h3>Cycle in your company</h3>
-            <p>Your owners, trucks, drivers, and brokers. English screens. Your people work in your system.</p>
+            <div class="num">02</div>
+            <h3>Your Cycle</h3>
+            <p>Your owners, trucks, drivers, and brokers. Your people work in your system.</p>
           </article>
           <article class="card reveal">
-            <div class="feature-num">03</div>
-            <h3>A driver app is separate</h3>
-            <p>The base system does not include a driver application. One can be added later and is quoted on its own.</p>
+            <div class="num">03</div>
+            <h3>A driver app, later</h3>
+            <p>The base system does not include a driver application. One can be added and is quoted on its own.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="work" aria-labelledby="work-title">
+    <section id="work">
       <div class="wrap">
         <article class="work reveal">
-          <h2 id="work-title">Designed in freight, offered outward</h2>
-          <p>
-            Cycle TMS has been in service since 2018. Andrii Karpachov, Chief Technology Officer of Unique for Logistics LLC, designed it with his team. The system was built for the daily control of trucks and loads: availability, the order of a trip, the document on that trip, and the invoice that follows.
-          </p>
-          <p>
-            Motor carriers in the United States still run a large share of domestic freight with the status in a call and the paperwork in a mailbox. Cycle TMS is the work of putting that record in one place, then implementing it for another carrier.
-          </p>
+          <p class="kicker">The work</p>
+          <h2>Designed in freight.</h2>
+          <p>Cycle TMS has been in service since 2018. Andrii Karpachov, Chief Technology Officer of Unique for Logistics LLC, designed it with his team. The system was built for the daily control of trucks and loads.</p>
+          <p>Motor carriers still move a large share of domestic freight with the status in a call and the paperwork in a mailbox. Cycle TMS puts that record in one place, then implements it for another carrier.</p>
         </article>
       </div>
     </section>
 
-    <section aria-labelledby="cta-title">
-      <div class="wrap">
-        <div class="cta-band">
-          <h2 id="cta-title">Tell us how your office dispatches</h2>
-          <p>Company, fleet, and the way a load moves today. We answer with a review. The proposal comes after that, when the scope is known.</p>
-          <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
-        </div>
+    <section class="cta">
+      <div class="wrap reveal">
+        <h2>See it on your dispatch day.</h2>
+        <p>Company, fleet, and the way a load moves today. We answer with a review. The commercial proposal comes after the scope is known.</p>
+        <button class="btn btn-blue" type="button" data-open-walkthrough>Request a review</button>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <div class="footer-brand">
-        <a class="logo" href="index.html" aria-label="Cycle TMS home">
-          <span class="logo-type">
-            <span class="logo-line1"><span class="logo-cycle">Cycle</span><span class="logo-mark">TMS</span></span>
-            <span class="logo-tag">FOR CARRIERS</span>
-          </span>
-        </a>
-      </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy</a>
         <a href="mailto:info@cycletiger.com">info@cycletiger.com</a>
@@ -282,7 +222,7 @@
       <div class="modal-header">
         <div>
           <h2 id="walk-title">Request a review</h2>
-          <p>This opens an email to info@cycletiger.com with what you enter.</p>
+          <p>This opens an email to info@cycletiger.com.</p>
         </div>
         <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
       </div>
@@ -308,12 +248,11 @@
           <textarea id="note" name="note" placeholder="How a load is accepted, how a truck is chosen, how the invoice is sent."></textarea>
         </div>
         <p class="form-error" data-form-error hidden>Enter a name, a company, and a valid email.</p>
-        <button class="btn btn-primary" type="submit">Email this request</button>
-        <p class="form-hint">No account is created. If mail does not open, write to info@cycletiger.com.</p>
+        <button class="btn btn-blue" type="submit">Email this request</button>
+        <p class="form-hint">If mail does not open, write to info@cycletiger.com.</p>
       </form>
     </div>
   </div>
-
   <script src="js/site.js" defer></script>
 </body>
 </html>
