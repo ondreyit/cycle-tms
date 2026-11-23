@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cycle TMS — Dispatch cargo vans and box trucks from one record</title>
-  <meta name="description" content="Cycle TMS keeps the van, the load, the rate confirmation, the POD, and the invoice on one order. In service since 2018." />
-  <meta property="og:title" content="Cycle TMS — One record for the van and the load" />
-  <meta property="og:description" content="Availability, dispatch, documents, alerts, and reports for carriers running cargo vans and box trucks." />
+  <title>Cycle TMS — Dispatch from one record</title>
+  <meta name="description" content="Cycle TMS keeps the truck, the load, the rate confirmation, the POD, and the invoice on one order. In service since 2018." />
+  <meta property="og:title" content="Cycle TMS — One record for the load" />
+  <meta property="og:description" content="Availability, dispatch, documents, alerts, and reports for a motor carrier." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tms.cycletiger.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -20,7 +20,7 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://tms.cycletiger.com/",
-      "description": "Transportation management system for carriers running cargo vans and box trucks.",
+      "description": "Transportation management system for motor carriers.",
       "datePublished": "2018",
       "inLanguage": "en",
       "author": {
@@ -61,8 +61,8 @@
   <main id="main">
     <section class="hero wrap">
       <p class="eyebrow">In service since 2018</p>
-      <h1>Book the van from one record.</h1>
-      <p class="hero-lead">Cycle TMS is the desk for a carrier running cargo vans and box trucks. The truck, the load, the rate confirmation, the POD, and the invoice stay on the same order.</p>
+      <h1>Book the load from one record.</h1>
+      <p class="hero-lead">Cycle TMS is the desk for a carrier. The truck, the load, the rate confirmation, the POD, and the invoice stay on the same order.</p>
       <div class="hero-ctas">
         <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
         <a class="btn btn-ghost" href="#pains">See the day it fixes</a>
@@ -74,22 +74,22 @@
         <source src="assets/sprinter-road.mp4" type="video/mp4" />
       </video>
     </figure>
-    <p class="fine wrap">Cargo van and box truck. One board for the whole shift.</p>
+    <p class="fine wrap">One board for the whole shift.</p>
 
     <section id="pains">
       <div class="wrap">
         <div class="center-copy reveal">
           <p class="kicker">The dispatch day</p>
           <h2>The load fails in the gaps.</h2>
-          <p>A van business loses money between the phone call and the invoice. Cycle closes those gaps on one order.</p>
+          <p>A carrier loses money between the phone call and the invoice. Cycle closes those gaps on one order.</p>
         </div>
         <div class="pains">
-          <article class="pain reveal"><b>The “free” van is not free.</b><p>It is still on a load, too far from the pickup, or the box will not take the freight. That shows up at the dock.</p></article>
+          <article class="pain reveal"><b>The “free” truck is not free.</b><p>It is still on a load, too far from the pickup, or the freight will not fit. That shows up at the dock.</p></article>
           <article class="pain reveal"><b>Two dispatchers take the same truck.</b><p>Availability lives in someone’s head. A unit held for a broker still gets given away.</p></article>
           <article class="pain reveal"><b>The broker calls before you see the miss.</b><p>The pickup window is close and the status is still Created. The update is assembled from a chat.</p></article>
           <article class="pain reveal"><b>The RC, the stop, and the invoice disagree.</b><p>The driver goes to one address. The rate confirmation says another. The broker cuts the pay.</p></article>
           <article class="pain reveal"><b>The POD is a photo. The invoice waits.</b><p>Delivery already happened. Cash sits until someone finds the paper.</p></article>
-          <article class="pain reveal"><b>The owner asks where the number came from.</b><p>Rate, extra stops, and driver pay are in three places. After unload the van still looks On route, so the next load never sees it.</p></article>
+          <article class="pain reveal"><b>The owner asks where the number came from.</b><p>Rate, extra stops, and driver pay are in three places. After unload the truck still looks On route, so the next load never sees it.</p></article>
         </div>
       </div>
     </section>
@@ -98,16 +98,16 @@
       <div class="wrap">
         <div class="center-copy reveal">
           <p class="kicker">01 · Reference data</p>
-          <h2>The van is a record, not a nickname.</h2>
+          <h2>The truck is a record, not a nickname.</h2>
         </div>
         <div class="pair">
           <figure class="shot reveal">
-            <img src="assets/sprinter-van.jpg" alt="White cargo van" width="1280" height="720" />
-            <figcaption><strong>Cargo van</strong><span>Type, box and door size, capacity, plate, VIN, insurance date.</span></figcaption>
+            <img src="assets/sprinter-van.jpg" alt="A truck from the fleet" width="1280" height="720" />
+            <figcaption><strong>The unit</strong><span>Type, dimensions, door, capacity, plate, VIN, insurance date.</span></figcaption>
           </figure>
           <figure class="shot reveal">
-            <img src="assets/sprinter-box.jpg" alt="White box truck on a van chassis" width="1280" height="720" />
-            <figcaption><strong>Box truck</strong><span>Same record. A driver is tied to the truck. An owner holds the trucks.</span></figcaption>
+            <img src="assets/sprinter-box.jpg" alt="A truck from the fleet" width="1280" height="720" />
+            <figcaption><strong>The same record</strong><span>A driver is tied to the truck. An owner holds the trucks.</span></figcaption>
           </figure>
         </div>
         <div class="facts-line" style="margin-top:0.9rem">
@@ -139,13 +139,13 @@
       <div class="wrap chapter reverse reveal">
         <div class="copy">
           <p class="kicker">03 · Availability and the match</p>
-          <h2>A free van, close enough, with a box that fits.</h2>
+          <h2>A free truck, close enough, that fits the freight.</h2>
           <p>A truck is Available, On route, Not available, or held until a date. The morning starts from that board. Every change keeps who set it and when.</p>
           <p>Dispatch enters the pickup ZIP and a distance. Cycle keeps only Available trucks inside that radius and shows type, size, owner, driver, and phones on one line. A unit can be held for a load so a second dispatcher cannot take it.</p>
         </div>
         <div class="sheet" aria-label="Fleet availability">
-          <div class="sheet__row"><span class="tag tag--free">Available</span><div><strong>Cargo van · inside the radius</strong><span>Box and door on the line. Owner and driver with it.</span></div></div>
-          <div class="sheet__row"><span class="tag tag--run">On route</span><div><strong>Box truck · under a load</strong><span>Not offered for the next pickup.</span></div></div>
+          <div class="sheet__row"><span class="tag tag--free">Available</span><div><strong>Inside the radius</strong><span>Dimensions and door on the line. Owner and driver with it.</span></div></div>
+          <div class="sheet__row"><span class="tag tag--run">On route</span><div><strong>Under a load</strong><span>Not offered for the next pickup.</span></div></div>
           <div class="sheet__row"><span class="tag tag--hold">Held</span><div><strong>Reserved until a date</strong><span>Kept for one broker. Released when that date arrives.</span></div></div>
           <div class="sheet__row"><span class="tag tag--off">Not available</span><div><strong>Back from delivery</strong><span>Visible again for the next load. Not left On route.</span></div></div>
         </div>
@@ -239,7 +239,7 @@
         <div class="cards">
           <article class="card reveal"><div class="num">Dispatcher</div><h3>The shift</h3><p>Loads moved, steps that sat, paper that arrived late.</p></article>
           <article class="card reveal"><div class="num">Truck</div><h3>The unit</h3><p>Time available, time held, loads it actually took.</p></article>
-          <article class="card reveal"><div class="num">Customer</div><h3>The broker</h3><p>How they pay, how often the bill is cut, whether the next van should go there.</p></article>
+          <article class="card reveal"><div class="num">Customer</div><h3>The broker</h3><p>How they pay, how often the bill is cut, whether the next truck should go there.</p></article>
         </div>
       </div>
     </section>
@@ -267,7 +267,7 @@
           <p>The engagement is the system and the work of putting it in. One to three months, set by the scope. The screens are in English. A proposal is written after we see how you dispatch.</p>
         </div>
         <div class="cards">
-          <article class="card reveal"><div class="num">01</div><h3>The operation</h3><p>How a load arrives, how a van is chosen, how paper and money move today.</p></article>
+          <article class="card reveal"><div class="num">01</div><h3>The operation</h3><p>How a load arrives, how a truck is chosen, how paper and money move today.</p></article>
           <article class="card reveal"><div class="num">02</div><h3>Your Cycle</h3><p>Your owners, trucks, drivers, and brokers. Your people work in your system.</p></article>
           <article class="card reveal"><div class="num">03</div><h3>A driver app, later</h3><p>The base system does not include a driver application. One can be added and is quoted on its own.</p></article>
         </div>
@@ -280,7 +280,7 @@
           <p class="kicker">The work</p>
           <h2>Designed in freight.</h2>
           <p>Cycle TMS has been in service since 2018. Andrii Karpachov, Chief Technology Officer of Unique for Logistics LLC, designed it with his team.</p>
-          <p>The desk still loses the van, the paper, and the invoice in the space between a call and a payment. Cycle TMS puts that record in one place, then implements it for another carrier.</p>
+          <p>The desk still loses the truck, the paper, and the invoice in the space between a call and a payment. Cycle TMS puts that record in one place, then implements it for another carrier.</p>
         </article>
       </div>
     </section>
@@ -333,7 +333,7 @@
         </div>
         <div class="field">
           <label for="note">How you dispatch today</label>
-          <textarea id="note" name="note" placeholder="How a load is accepted, how a van is chosen, how the invoice is sent."></textarea>
+          <textarea id="note" name="note" placeholder="How a load is accepted, how a truck is chosen, how the invoice is sent."></textarea>
         </div>
         <p class="form-error" data-form-error hidden>Enter a name, a company, and a valid email.</p>
         <button class="btn btn-blue" type="submit">Email this request</button>
