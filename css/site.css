@@ -664,8 +664,8 @@ footer p { margin: 0; }
   gap: 1rem;
 }
 
-@media (min-width: 900px) {
-  .kpis { grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 800px) {
+  .kpis { grid-template-columns: 1fr 1fr; }
 }
 
 .kpi {
@@ -718,6 +718,84 @@ footer p { margin: 0; }
 .bar--off i { background: var(--off); }
 
 .kpi .fine { width: auto; margin: 0.7rem 0 0; }
+
+.ranks { display: grid; gap: 0.7rem; margin-top: 1.15rem; }
+
+.rank {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.rank b { font-size: 0.92rem; font-weight: 600; }
+
+@media (max-width: 560px) {
+  .rank { grid-template-columns: 4.2rem 1fr; }
+  .lvl { grid-column: 2; }
+}
+
+.meter {
+  height: 8px;
+  background: var(--recess);
+}
+
+.meter i { display: block; height: 100%; background: var(--link); }
+.meter i.is-high { background: var(--ok); }
+.meter i.is-mid { background: var(--hold); }
+.meter i.is-low { background: var(--bad); }
+
+.lvl {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lvl--high { color: var(--ok); }
+.lvl--mid { color: var(--hold); }
+.lvl--low { color: var(--bad); }
+
+.splitbar {
+  display: flex;
+  height: 2.6rem;
+  margin-top: 1.15rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.splitbar span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.splitbar span:nth-child(1) { background: var(--link); }
+.splitbar span:nth-child(2) { background: var(--ok); }
+.splitbar span:nth-child(3) { background: var(--hold); }
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--body);
+  font-size: 0.85rem;
+}
+
+.legend li { display: flex; align-items: center; gap: 0.4rem; }
+.legend li::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--link);
+}
+.legend li:nth-child(2)::before { background: var(--ok); }
+.legend li:nth-child(3)::before { background: var(--hold); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

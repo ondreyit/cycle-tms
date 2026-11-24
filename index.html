@@ -77,7 +77,7 @@
         <h2>What a TMS is for, and how Cycle works.</h2>
         <p class="lede">A carrier’s day is a set of loads that have to be covered, moved, proved, and billed. A transportation management system is the place that day is kept, so the dispatcher, the truck, and the invoice are one story. Cycle TMS is that system.</p>
         <p class="lede">The working principle is one load, one order. The order names the broker, the truck, the driver, and both stops. It holds the freight, the miles, the hours, the rate, and the driver pay. The truck is free only when the order says it has been released. The rate confirmation, the BOL, the POD, and the invoice belong to that same number. A step that skips the sequence does not save. If it did, the desk and the truck would stop agreeing.</p>
-        <p class="lede">That is what the system is there to do. In the morning, dispatch sees which trucks can take a load. Through the day, the order shows where the trip is, and a signal shows when the trip has stopped making sense. At delivery, the proof is filed on the order and the invoice is raised from it. At the end of the week, the same records are read by dispatcher, by truck, and by broker.</p>
+        <p class="lede">That is what the system is there to do. In the morning, dispatch sees which trucks can take a load. Through the day, the order shows where the trip is, and a signal shows when the trip has stopped making sense. At delivery, the proof is filed on the order and the invoice is raised from it. At the end of the week, the same records show sales by client, how loaded each truck was, each salesperson’s share, and the SLA kept for each client.</p>
         <div class="ledger">
           <article class="row"><b>The records</b><p>Owner, truck, and driver, linked. Brokers, shippers, and consignees, with more than one address.</p></article>
           <article class="row"><b>The morning</b><p>Who is On route, Not available, Available, or held until a date. A pickup ZIP and a distance return only Available trucks that fit.</p></article>
@@ -129,45 +129,63 @@
           <article class="row"><b>You see the miss first.</b><p>The late pickup, the quiet location, the missing POD, and the missing invoice show while there is still time to act.</p></article>
           <article class="row"><b>The bill matches the trip.</b><p>Rate, extra stops, driver pay, and what is left are on the order the driver ran. The owner does not have to reconstruct the number.</p></article>
           <article class="row"><b>An empty truck is back on the board.</b><p>After the consignee, the truck is not left On route.</p></article>
-          <article class="row"><b>The week can be read.</b><p>Reports show the dispatcher, the truck, and the broker: loads moved, steps that sat, time available, time held, and how the customer pays.</p></article>
+          <article class="row"><b>The week can be read.</b><p>Sales volume by client, truck load with a level, each salesperson’s share of sales, and the SLA kept for each client.</p></article>
         </div>
       </div>
     </section>
 
     <section id="kpi">
       <div class="wrap">
-        <p class="kicker">05 · Sample of the three reports</p>
-        <h2>What the week looks like on paper.</h2>
-        <p class="lede">Three cuts the system already makes: the person, the truck, and the money. The figures below are an example of the report. They are not a carrier’s result.</p>
+        <p class="kicker">05 · The four reports</p>
+        <h2>Sales, load, share, and SLA.</h2>
+        <p class="lede">These are the four cuts. The figures are an example of the report. They are not a carrier’s result.</p>
         <div class="kpis">
           <figure class="kpi">
             <span class="tag">Sample</span>
-            <strong>Loads moved, by dispatcher</strong>
-            <div class="bars" role="img" aria-label="Example week. Dispatcher 1 moved 22 loads, dispatcher 2 moved 17, dispatcher 3 moved 11.">
-              <div class="bar"><b>22</b><i style="height:88%"></i><small>Disp. 1</small></div>
-              <div class="bar"><b>17</b><i style="height:68%"></i><small>Disp. 2</small></div>
-              <div class="bar"><b>11</b><i style="height:44%"></i><small>Disp. 3</small></div>
+            <strong>Sales volume, by client</strong>
+            <div class="bars" role="img" aria-label="Example week, sales in thousands. Client A 48, Client B 31, Client C 22, Client D 14.">
+              <div class="bar"><b>48</b><i style="height:96%"></i><small>Client A</small></div>
+              <div class="bar"><b>31</b><i style="height:62%"></i><small>Client B</small></div>
+              <div class="bar"><b>22</b><i style="height:44%"></i><small>Client C</small></div>
+              <div class="bar"><b>14</b><i style="height:28%"></i><small>Client D</small></div>
             </div>
-            <p class="fine">Example week. Not a carrier’s result.</p>
+            <p class="fine">Example week, $000. Not a carrier’s result.</p>
           </figure>
           <figure class="kpi">
             <span class="tag">Sample</span>
-            <strong>Where the truck’s hours went</strong>
-            <div class="bars" role="img" aria-label="Example week. 41 hours on route, 26 hours available, 11 hours held.">
-              <div class="bar"><b>41</b><i style="height:82%"></i><small>On route</small></div>
-              <div class="bar bar--ok"><b>26</b><i style="height:52%"></i><small>Available</small></div>
-              <div class="bar bar--hold"><b>11</b><i style="height:22%"></i><small>Held</small></div>
+            <strong>Top trucks, by load</strong>
+            <div class="ranks" role="img" aria-label="Example week. Unit 14 at 94 percent, high. Unit 07 at 81 percent, high. Unit 22 at 63 percent, mid. Unit 03 at 41 percent, low.">
+              <div class="rank"><b>Unit 14</b><span class="meter"><i class="is-high" style="width:94%"></i></span><span class="lvl lvl--high">94% · High</span></div>
+              <div class="rank"><b>Unit 07</b><span class="meter"><i class="is-high" style="width:81%"></i></span><span class="lvl lvl--high">81% · High</span></div>
+              <div class="rank"><b>Unit 22</b><span class="meter"><i class="is-mid" style="width:63%"></i></span><span class="lvl lvl--mid">63% · Mid</span></div>
+              <div class="rank"><b>Unit 03</b><span class="meter"><i class="is-low" style="width:41%"></i></span><span class="lvl lvl--low">41% · Low</span></div>
             </div>
-            <p class="fine">Example week. Not a carrier’s result.</p>
+            <p class="fine">High is 80% and up. Mid is 60–79. Low is under 60. Example week.</p>
           </figure>
           <figure class="kpi">
             <span class="tag">Sample</span>
-            <strong>Invoices from those orders</strong>
-            <div class="bars" role="img" aria-label="Example week. 19 invoices paid, 8 not paid.">
-              <div class="bar bar--ok"><b>19</b><i style="height:76%"></i><small>Paid</small></div>
-              <div class="bar bar--off"><b>8</b><i style="height:32%"></i><small>Not paid</small></div>
+            <strong>Share of sales, by salesperson</strong>
+            <div class="splitbar" role="img" aria-label="Example week. Sales 1 has 42 percent, Sales 2 has 33 percent, Sales 3 has 25 percent.">
+              <span style="width:42%">42%</span>
+              <span style="width:33%">33%</span>
+              <span style="width:25%">25%</span>
             </div>
-            <p class="fine">Example week. Not a carrier’s result.</p>
+            <ul class="legend">
+              <li>Sales 1</li>
+              <li>Sales 2</li>
+              <li>Sales 3</li>
+            </ul>
+            <p class="fine">Example week. The three shares add to the week’s sales.</p>
+          </figure>
+          <figure class="kpi">
+            <span class="tag">Sample</span>
+            <strong>SLA kept, by client</strong>
+            <div class="ranks" role="img" aria-label="Example week, share of trips that met the appointment. Client A 98 percent, met. Client B 91 percent, met. Client C 76 percent, short.">
+              <div class="rank"><b>Client A</b><span class="meter"><i class="is-high" style="width:98%"></i></span><span class="lvl lvl--high">98% · Met</span></div>
+              <div class="rank"><b>Client B</b><span class="meter"><i class="is-high" style="width:91%"></i></span><span class="lvl lvl--high">91% · Met</span></div>
+              <div class="rank"><b>Client C</b><span class="meter"><i class="is-low" style="width:76%"></i></span><span class="lvl lvl--low">76% · Short</span></div>
+            </div>
+            <p class="fine">Share of trips that met the appointment. Sample line is 90%. Example week.</p>
           </figure>
         </div>
       </div>
