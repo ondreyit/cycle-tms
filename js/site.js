@@ -89,12 +89,12 @@
         "Company: " + company,
         "Email: " + email,
         "",
-        note || "Please review how we dispatch for Cycle TMS."
+        note || "Please set a first meeting about Cycle TMS."
       ];
 
       window.location.href =
         "mailto:info@cycletiger.com?subject=" +
-        encodeURIComponent("Cycle TMS review — " + company) +
+        encodeURIComponent("Cycle TMS — first meeting — " + company) +
         "&body=" +
         encodeURIComponent(lines.join("\n"));
     });
