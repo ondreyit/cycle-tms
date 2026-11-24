@@ -34,43 +34,6 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  var flow = document.querySelector("[data-flow]");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (flow && !reduceMotion) {
-    var steps = flow.querySelectorAll("li");
-    var stepIndex = 0;
-    if (steps.length) {
-      steps[0].classList.add("is-on");
-      window.setInterval(function () {
-        steps[stepIndex].classList.remove("is-on");
-        stepIndex = (stepIndex + 1) % steps.length;
-        steps[stepIndex].classList.add("is-on");
-      }, 1600);
-    }
-  }
-
-  var reduce = reduceMotion;
-  if (!reduce && "IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.16 }
-    );
-    document.querySelectorAll(".reveal").forEach(function (node) {
-      observer.observe(node);
-    });
-  } else {
-    document.querySelectorAll(".reveal").forEach(function (node) {
-      node.classList.add("is-visible");
-    });
-  }
-
   var modal = document.querySelector("[data-modal]");
   var form = document.querySelector("[data-walkthrough-form]");
   var error = document.querySelector("[data-form-error]");
@@ -114,7 +77,6 @@
       var name = String(data.get("name") || "").trim();
       var company = String(data.get("company") || "").trim();
       var email = String(data.get("email") || "").trim();
-      var fleet = String(data.get("fleet") || "").trim();
       var note = String(data.get("note") || "").trim();
 
       if (!name || !company || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -126,9 +88,8 @@
         "Name: " + name,
         "Company: " + company,
         "Email: " + email,
-        "Power units: " + (fleet || "Not specified"),
         "",
-        note || "Please review our operation for Cycle TMS."
+        note || "Please review how we dispatch for Cycle TMS."
       ];
 
       window.location.href =

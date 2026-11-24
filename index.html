@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cycle TMS — Dispatch from one record</title>
-  <meta name="description" content="Cycle TMS keeps the truck, the load, the rate confirmation, the POD, and the invoice on one order. In service since 2018." />
-  <meta property="og:title" content="Cycle TMS — One record for the load" />
-  <meta property="og:description" content="Availability, dispatch, documents, alerts, and reports for a motor carrier." />
+  <title>Cycle TMS — One order holds the truck, the paper, and the invoice</title>
+  <meta name="description" content="Cycle TMS keeps the truck, the rate confirmation, the BOL, the POD, and the invoice on one order. A skipped step does not save. In service since 2018." />
+  <meta property="og:title" content="Cycle TMS — One order holds the truck, the paper, and the invoice" />
+  <meta property="og:description" content="Available means the truck has been released. The dispatcher decides. A proposal follows a look at how you dispatch." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tms.cycletiger.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://tms.cycletiger.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
   <script type="application/ld+json">
     {
@@ -20,7 +23,7 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://tms.cycletiger.com/",
-      "description": "Transportation management system for motor carriers.",
+      "description": "Transportation management system that keeps the truck, the rate confirmation, the POD, and the invoice on one order.",
       "datePublished": "2018",
       "inLanguage": "en",
       "author": {
@@ -48,248 +51,186 @@
         <span class="sr-only">Menu</span>
       </button>
       <nav class="nav-links" id="site-nav" data-nav-drawer aria-label="Main">
-        <a href="#pains">The day</a>
-        <a href="#fleet">Fleet</a>
+        <a href="#day">The day</a>
+        <a href="#board">Board</a>
         <a href="#order">Order</a>
         <a href="#signals">Signals</a>
-        <a href="#reports">Reports</a>
-        <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
+        <button class="btn" type="button" data-open-walkthrough>Show us your dispatch</button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero wrap">
-      <p class="eyebrow">In service since 2018</p>
-      <h1>Book the load from one record.</h1>
-      <p class="hero-lead">Cycle TMS is the desk for a carrier. The truck, the load, the rate confirmation, the POD, and the invoice stay on the same order.</p>
+    <section class="hero wrap" style="border-top:0;padding-bottom:1.4rem">
+      <h1>One order holds the truck, the rate confirmation, the BOL, the POD, and the invoice.</h1>
+      <p class="hero-lead">The broker, the truck, the driver, both stops, the miles, the hours, the rate, and the driver pay sit on that order. A skipped step does not save.</p>
       <div class="hero-ctas">
-        <button class="btn btn-primary" type="button" data-open-walkthrough>Request a review</button>
-        <a class="btn btn-ghost" href="#pains">See the day it fixes</a>
+        <button class="btn" type="button" data-open-walkthrough>Show us your dispatch</button>
+        <a class="btn btn-line" href="#day">The day it breaks</a>
       </div>
     </section>
 
     <figure class="stage">
-      <video autoplay muted loop playsinline poster="assets/sprinter-van.jpg">
+      <video autoplay muted loop playsinline poster="assets/unit-file.jpg">
         <source src="assets/sprinter-road.mp4" type="video/mp4" />
       </video>
     </figure>
-    <p class="fine wrap">One board for the whole shift.</p>
+    <p class="fine">The morning board</p>
 
-    <section id="pains">
+    <section id="day">
       <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">The dispatch day</p>
-          <h2>The load fails in the gaps.</h2>
-          <p>A carrier loses money between the phone call and the invoice. Cycle closes those gaps on one order.</p>
-        </div>
-        <div class="pains">
-          <article class="pain reveal"><b>The “free” truck is not free.</b><p>It is still on a load, too far from the pickup, or the freight will not fit. That shows up at the dock.</p></article>
-          <article class="pain reveal"><b>Two dispatchers take the same truck.</b><p>Availability lives in someone’s head. A unit held for a broker still gets given away.</p></article>
-          <article class="pain reveal"><b>The broker calls before you see the miss.</b><p>The pickup window is close and the status is still Created. The update is assembled from a chat.</p></article>
-          <article class="pain reveal"><b>The RC, the stop, and the invoice disagree.</b><p>The driver goes to one address. The rate confirmation says another. The broker cuts the pay.</p></article>
-          <article class="pain reveal"><b>The POD is a photo. The invoice waits.</b><p>Delivery already happened. Cash sits until someone finds the paper.</p></article>
-          <article class="pain reveal"><b>The owner asks where the number came from.</b><p>Rate, extra stops, and driver pay are in three places. After unload the truck still looks On route, so the next load never sees it.</p></article>
+        <p class="kicker">The dispatch day</p>
+        <h2>The broker saw the late pickup first.</h2>
+        <p class="lede">The miss is already in the open order. The desk finds it after the broker does.</p>
+        <div class="ledger">
+          <article class="row">
+            <b>The truck you are about to cover is not free.</b>
+            <p>The order is still open, the truck has not been released from the consignee, or the truck is held until a date.</p>
+          </article>
+          <article class="row">
+            <b>Two dispatchers booked one truck.</b>
+            <p>Each sent a rate confirmation on the same truck.</p>
+          </article>
+          <article class="row">
+            <b>The broker saw the late pickup first.</b>
+            <p>The truck is not rolling, the order still says on route to the shipper, and the broker is already calling.</p>
+          </article>
+          <article class="row">
+            <b>The driver is at a different address than the rate confirmation.</b>
+            <p>The rate confirmation names one pickup. The driver was sent to another.</p>
+          </article>
+          <article class="row">
+            <b>The POD is a photo, and the invoice is waiting.</b>
+            <p>The consignee signed. The picture is in a text. The invoice has not been issued from the order.</p>
+          </article>
+          <article class="row">
+            <b>The truck is unloaded and the order still says On route.</b>
+            <p>The freight is off at the consignee. The status was not moved. The next load never sees the truck.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="fleet">
+    <section id="board">
       <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">01 · Reference data</p>
-          <h2>The truck is a record, not a nickname.</h2>
-        </div>
-        <div class="pair">
-          <figure class="shot reveal">
-            <img src="assets/sprinter-van.jpg" alt="A truck from the fleet" width="1280" height="720" />
-            <figcaption><strong>The unit</strong><span>Type, dimensions, door, capacity, plate, VIN, insurance date.</span></figcaption>
+        <div class="split">
+          <div>
+            <p class="kicker">Availability</p>
+            <h2>Available means the truck has been released.</h2>
+            <p class="lede">A truck is On route, Not available, Available, or held until a date. Every change keeps who set it and when. Dispatch enters the pickup ZIP and a distance. Cycle returns only Available trucks inside that radius, with size, owner, driver, and phones. A hold keeps the truck with one dispatcher.</p>
+          </div>
+          <figure class="shot">
+            <img src="assets/unit-file.jpg" alt="A truck with the rear doors open" width="1280" height="720" />
+            <figcaption>
+              <strong>Unit on file.</strong>
+              <span>Dimensions, door, capacity, plate, VIN, and insurance expiry stay on the truck, so dispatch does not ask again by phone.</span>
+            </figcaption>
           </figure>
-          <figure class="shot reveal">
-            <img src="assets/sprinter-box.jpg" alt="A truck from the fleet" width="1280" height="720" />
-            <figcaption><strong>The same record</strong><span>A driver is tied to the truck. An owner holds the trucks.</span></figcaption>
-          </figure>
         </div>
-        <div class="facts-line" style="margin-top:0.9rem">
-          <article class="factbox reveal"><small>Owner</small><b>Name, MC, USDOT, phone</b></article>
-          <article class="factbox reveal"><small>Truck</small><b>Dims, door, capacity, insurance</b></article>
-          <article class="factbox reveal"><small>Driver</small><b>License class and expiry, phones</b></article>
-          <article class="factbox reveal"><small>Link</small><b>Owner → truck → driver</b></article>
+        <div class="sheet" style="margin-top:1.6rem" aria-label="Truck availability">
+          <div class="sheet__row"><span class="tag tag--run">On route</span><div><strong>The truck is moving.</strong><span>Not offered for the next pickup.</span></div></div>
+          <div class="sheet__row"><span class="tag tag--off">Not available</span><div><strong>Arrived at the consignee.</strong><span>The freight may be off. The truck is not back on the board until it is released.</span></div></div>
+          <div class="sheet__row"><span class="tag tag--ok">Available</span><div><strong>Released.</strong><span>Inside the radius, and the freight fits the door and the capacity.</span></div></div>
+          <div class="sheet__row"><span class="tag tag--hold">Held</span><div><strong>Out until a date.</strong><span>Kept for one broker. Released when that date arrives.</span></div></div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap chapter reveal">
-        <div class="copy">
-          <p class="kicker">02 · Counterparties</p>
-          <h2>Broker and both stops, from one book.</h2>
-          <p>Brokers, shippers, and consignees each have a name, a contact, a phone, an email, and an MC number. A company can have several addresses.</p>
-          <p>The order pulls the broker and both stops from that book. The address on the rate confirmation and the address on the dispatch are the same record.</p>
-        </div>
-        <div class="sheet" aria-label="What a counterparty holds">
-          <div class="sheet__row"><span class="tag tag--run">Broker</span><div><strong>Who pays the load</strong><span>Name, contact, MC, phone, email</span></div></div>
-          <div class="sheet__row"><span class="tag tag--free">Shipper</span><div><strong>Pickup</strong><span>Street, city, state, ZIP. More than one address.</span></div></div>
-          <div class="sheet__row"><span class="tag tag--hold">Consignee</span><div><strong>Delivery</strong><span>The same book. The order does not retype the dock.</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="match">
-      <div class="wrap chapter reverse reveal">
-        <div class="copy">
-          <p class="kicker">03 · Availability and the match</p>
-          <h2>A free truck, close enough, that fits the freight.</h2>
-          <p>A truck is Available, On route, Not available, or held until a date. The morning starts from that board. Every change keeps who set it and when.</p>
-          <p>Dispatch enters the pickup ZIP and a distance. Cycle keeps only Available trucks inside that radius and shows type, size, owner, driver, and phones on one line. A unit can be held for a load so a second dispatcher cannot take it.</p>
-        </div>
-        <div class="sheet" aria-label="Fleet availability">
-          <div class="sheet__row"><span class="tag tag--free">Available</span><div><strong>Inside the radius</strong><span>Dimensions and door on the line. Owner and driver with it.</span></div></div>
-          <div class="sheet__row"><span class="tag tag--run">On route</span><div><strong>Under a load</strong><span>Not offered for the next pickup.</span></div></div>
-          <div class="sheet__row"><span class="tag tag--hold">Held</span><div><strong>Reserved until a date</strong><span>Kept for one broker. Released when that date arrives.</span></div></div>
-          <div class="sheet__row"><span class="tag tag--off">Not available</span><div><strong>Back from delivery</strong><span>Visible again for the next load. Not left On route.</span></div></div>
+        <div class="facts">
+          <article><small>Owner</small><b>Name, MC, USDOT, phone</b></article>
+          <article><small>Truck</small><b>Dimensions, door, capacity, plate, VIN, insurance</b></article>
+          <article><small>Driver</small><b>License class and expiry, phones</b></article>
+          <article><small>Link</small><b>Owner, truck, and driver on one line</b></article>
         </div>
       </div>
     </section>
 
     <section id="order">
       <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">04 · The order</p>
-          <h2>Dispatch lives on the order.</h2>
-          <p>Broker, truck, driver, both stops, dates, pieces, weight, miles, hours, reference, rate, and driver pay. A step out of sequence does not save. The truck follows the order: On route while it is moving, Not available once it has arrived to the consignee.</p>
-        </div>
-        <div class="facts-line reveal">
-          <article class="factbox"><small>Who</small><b>Broker, truck, driver</b></article>
-          <article class="factbox"><small>Where</small><b>Pickup and delivery</b></article>
-          <article class="factbox"><small>Freight</small><b>Pieces, weight, miles</b></article>
-          <article class="factbox"><small>Money</small><b>Rate and driver pay</b></article>
-        </div>
-        <ol class="flow" data-flow style="margin-top:0.9rem">
-          <li><span class="n">01</span><strong>Created</strong><span>Opened on an available truck.</span></li>
+        <p class="kicker">The order</p>
+        <h2>A skipped step does not save.</h2>
+        <p class="lede">Broker, truck, driver, both stops, dates, pieces, weight, miles, hours, reference, rate, and driver pay. The truck follows the order: On route while it is moving, Not available once it has arrived at the consignee.</p>
+        <ol class="rail">
+          <li><span class="n">01</span><strong>Created</strong><span>Opened on a truck that is Available.</span></li>
           <li><span class="n">02</span><strong>To the shipper</strong><span>On route, then arrived.</span></li>
           <li><span class="n">03</span><strong>To the consignee</strong><span>On route, then arrived.</span></li>
-          <li><span class="n">04</span><strong>Invoice issued</strong><span>Filled from this order.</span></li>
-          <li><span class="n">05</span><strong>Order paid</strong><span>Same number as the trip.</span></li>
+          <li><span class="n">04</span><strong>Invoice issued</strong><span>Filled from this order. Paid or Not paid.</span></li>
+          <li><span class="n">05</span><strong>Order paid</strong><span>The same number as the trip.</span></li>
         </ol>
+        <p class="rule">A status out of sequence does not save.</p>
+        <div class="docs">
+          <article class="doc"><span class="n">01</span><strong>Rate confirmation</strong><span>Rate, stops, and the broker, on the order the driver is running.</span></article>
+          <article class="doc"><span class="n">02</span><strong>BOL</strong><span>Attached when the freight is on the truck.</span></article>
+          <article class="doc"><span class="n">03</span><strong>POD</strong><span>Attached at delivery. Not left in a text.</span></article>
+          <article class="doc"><span class="n">04</span><strong>Invoice</strong><span>Built from the order. Closes as paid on the same number.</span></article>
+        </div>
+        <p class="note">Brokers, shippers, and consignees are one book: name, contact, phone, email, MC, and more than one address. The order takes the broker and both stops from that book, so the rate confirmation and the dispatch name the same dock.</p>
+        <div class="split" style="margin-top:1.8rem">
+          <figure class="shot">
+            <img src="assets/linked-unit.jpg" alt="A truck waiting at a yard" width="1280" height="720" />
+            <figcaption>
+              <strong>Owner, truck, and driver stay linked.</strong>
+              <span>Availability, the order, and the pay do not drift onto three lists.</span>
+            </figcaption>
+          </figure>
+          <div class="ledger">
+            <article class="row"><b>Who</b><p>Broker, truck, driver.</p></article>
+            <article class="row"><b>Where</b><p>Pickup and delivery, from the book.</p></article>
+            <article class="row"><b>Freight</b><p>Pieces, weight, miles, hours.</p></article>
+            <article class="row"><b>Money</b><p>Rate, driver pay, and what is left.</p></article>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="signals">
-      <div class="wrap chapter reveal">
-        <div class="copy">
-          <p class="kicker">05 · Intelligence on the live trip</p>
-          <h2>A problem while you can still fix it.</h2>
-          <p>Cycle watches the order, the clock, the status, and the location. It raises the miss before the morning meeting and before the broker is the one who finds it.</p>
-          <p>This is a signal on a trip that is already moving. The dispatcher still decides what to do.</p>
-        </div>
-        <div class="signals">
-          <article class="signal"><i class="dot"></i><div><b>Not rolling toward the window</b><span>Pickup is close. Status is still Created.</span></div></article>
-          <article class="signal"><i class="dot"></i><div><b>Status has stopped</b><span>The step has not moved and the appointment is passing.</span></div></article>
-          <article class="signal"><i class="dot"></i><div><b>Location went quiet</b><span>The point, the Google link, or Macropoint stopped updating.</span></div></article>
-          <article class="signal"><i class="dot"></i><div><b>Delivered, no POD</b><span>The truck arrived. The proof is not on the order.</span></div></article>
-          <article class="signal"><i class="dot"></i><div><b>Delivered, no invoice</b><span>The freight is off. The bill has not been raised.</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="papers">
       <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">06 · Documents on the order</p>
-          <h2>RC, BOL, POD, invoice. One number.</h2>
-          <p>The rate confirmation, the bill of lading, the proof of delivery, and the invoice belong to the trip. The invoice is filled from the order: amount, dates, addresses, due date, Paid or Not paid.</p>
+        <p class="kicker">On a moving trip</p>
+        <h2>The dispatcher decides.</h2>
+        <p class="lede">While a trip is moving, a signal shows the miss. The person still chooses what to do. A status change can be sent to the broker without a new email written by hand.</p>
+        <div class="ledger">
+          <article class="row"><span class="tag tag--hold">Not rolling</span><p>Pickup is close. The order still says Created.</p></article>
+          <article class="row"><span class="tag tag--hold">Status stuck</span><p>The step has not moved, and the appointment is passing.</p></article>
+          <article class="row"><span class="tag tag--hold">Location quiet</span><p>The point on the order, the Google link, or Macropoint stopped updating.</p></article>
+          <article class="row"><span class="tag tag--bad">Delivered, no POD</span><p>The truck arrived. The proof is not on the order.</p></article>
+          <article class="row"><span class="tag tag--bad">Delivered, no invoice</span><p>The freight is off. The bill has not been raised from the order.</p></article>
         </div>
-        <div class="docs">
-          <article class="doc reveal"><span class="n">01</span><strong>Rate confirmation</strong><span>Rate, stops, and the broker, on the order the driver is running.</span></article>
-          <article class="doc reveal"><span class="n">02</span><strong>BOL</strong><span>Attached when the freight is on the truck.</span></article>
-          <article class="doc reveal"><span class="n">03</span><strong>POD</strong><span>Attached at delivery. Not left in a camera roll.</span></article>
-          <article class="doc reveal"><span class="n">04</span><strong>Invoice</strong><span>Built from the order. Closes as paid on the same number.</span></article>
+        <div class="ledger" style="margin-top:2rem">
+          <article class="row"><b>No skipped step</b><p>A status out of sequence does not save.</p></article>
+          <article class="row"><b>The truck follows the order</b><p>On route while moving. Not available after arrival at the consignee.</p></article>
+          <article class="row"><b>A hold expires</b><p>The date arrives and the truck is released back to the board.</p></article>
+          <article class="row"><b>The invoice moves the order</b><p>Raising the bill sets the order to Invoice issued.</p></article>
+          <article class="row"><b>The change is kept</b><p>Who moved a status, from what, and when, stays on the log.</p></article>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="band reveal">
-          <div>
-            <p class="kicker">07 · Alerts that act</p>
-            <h2>The situation moves the record.</h2>
-            <p>What fires depends on where the trip is. A person does not have to remember the rule.</p>
-          </div>
-          <div class="tiles">
-            <article class="tile"><strong>No skipped step</strong><span>A status out of sequence does not save.</span></article>
-            <article class="tile"><strong>Truck follows the order</strong><span>On route while moving. Not available after arrival at the consignee.</span></article>
-            <article class="tile"><strong>A hold expires</strong><span>The date arrives and the truck is released back to the board.</span></article>
-            <article class="tile"><strong>Invoice moves the order</strong><span>Raising the bill sets the order to Invoice issued.</span></article>
-            <article class="tile"><strong>The broker is updated</strong><span>A status change can go out without a fresh email written by hand.</span></article>
-            <article class="tile"><strong>The change is kept</strong><span>Who moved a status, from what, and when, stays on the log.</span></article>
-          </div>
-        </div>
+        <p class="note">Also on the order: a point of its own, a Google link stored as coordinates, or Macropoint; the trip monitor and the map; miles and hours between ZIPs; the reserve, the actual start, and the status log. The same records cut as reports by dispatcher, by truck, and by broker.</p>
       </div>
     </section>
 
     <section id="reports">
       <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">08 · Reports</p>
-          <h2>Who is actually moving freight.</h2>
-          <p>The morning board and the order list are the start. The cut that matters is people, trucks, and customers.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal"><div class="num">Dispatcher</div><h3>The shift</h3><p>Loads moved, steps that sat, paper that arrived late.</p></article>
-          <article class="card reveal"><div class="num">Truck</div><h3>The unit</h3><p>Time available, time held, loads it actually took.</p></article>
-          <article class="card reveal"><div class="num">Customer</div><h3>The broker</h3><p>How they pay, how often the bill is cut, whether the next truck should go there.</p></article>
+        <p class="kicker">Reports</p>
+        <h2>What slowed the desk.</h2>
+        <p class="lede">The morning board is the start. The cut that matters is the person, the truck, and the broker.</p>
+        <div class="cuts">
+          <article><span class="tag">Dispatcher</span><h3>The shift</h3><p>Loads moved, steps that sat, paper that arrived late.</p></article>
+          <article><span class="tag">Truck</span><h3>The unit</h3><p>Time available, time held, loads it actually took.</p></article>
+          <article><span class="tag">Broker</span><h3>The customer</h3><p>How they pay, and how often the bill is cut.</p></article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">Also on the order</p>
-          <h2>The rest of the running trip.</h2>
-        </div>
-        <div class="facts-line">
-          <article class="factbox reveal"><small>Location</small><b>Own point, Google, Macropoint</b></article>
-          <article class="factbox reveal"><small>Watch</small><b>Trip monitor and map</b></article>
-          <article class="factbox reveal"><small>Distance</small><b>Miles and hours between ZIPs</b></article>
-          <article class="factbox reveal"><small>Time</small><b>Reserve, actual start, status log</b></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="implementation">
-      <div class="wrap">
-        <div class="center-copy reveal">
-          <p class="kicker">Implementation</p>
-          <h2>Stood up in your office.</h2>
-          <p>The engagement is the system and the work of putting it in. One to three months, set by the scope. The screens are in English. A proposal is written after we see how you dispatch.</p>
-        </div>
-        <div class="cards">
-          <article class="card reveal"><div class="num">01</div><h3>The operation</h3><p>How a load arrives, how a truck is chosen, how paper and money move today.</p></article>
-          <article class="card reveal"><div class="num">02</div><h3>Your Cycle</h3><p>Your owners, trucks, drivers, and brokers. Your people work in your system.</p></article>
-          <article class="card reveal"><div class="num">03</div><h3>A driver app, later</h3><p>The base system does not include a driver application. One can be added and is quoted on its own.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <div class="wrap">
-        <article class="work reveal">
-          <p class="kicker">The work</p>
-          <h2>Designed in freight.</h2>
-          <p>Cycle TMS has been in service since 2018. Andrii Karpachov, Chief Technology Officer of Unique for Logistics LLC, designed it with his team.</p>
-          <p>The desk still loses the truck, the paper, and the invoice in the space between a call and a payment. Cycle TMS puts that record in one place, then implements it for another carrier.</p>
-        </article>
+    <section id="office">
+      <div class="wrap office">
+        <p class="kicker">In your office</p>
+        <h2>Set up around your trucks and your people.</h2>
+        <p>The work is the system and putting it in. One to three months, set by the scope. The screens are in English. We look at how a load is accepted, how a truck is chosen, and how the paper and the money move. The proposal comes after that.</p>
+        <p>Cycle TMS has been in service since 2018. Andrii Karpachov, Chief Technology Officer of Unique for Logistics LLC, designed it with his team.</p>
+        <p class="quiet">A driver app can be added and is quoted on its own.</p>
       </div>
     </section>
 
     <section class="cta">
-      <div class="wrap reveal">
-        <h2>See it on your dispatch day.</h2>
-        <p>Company, fleet, and the way a load moves today. We answer with a review. The commercial proposal comes after the scope is known.</p>
-        <button class="btn btn-blue" type="button" data-open-walkthrough>Request a review</button>
+      <div class="wrap">
+        <h2>Show us how you dispatch today.</h2>
+        <p>Company, and where a load breaks between the broker call and the invoice. We answer with a review. The commercial proposal comes after the scope is known.</p>
+        <button class="btn" type="button" data-open-walkthrough>Show us your dispatch</button>
       </div>
     </section>
   </main>
@@ -309,8 +250,8 @@
     <div class="modal-panel">
       <div class="modal-header">
         <div>
-          <h2 id="walk-title">Request a review</h2>
-          <p>This opens an email to info@cycletiger.com.</p>
+          <h2 id="walk-title">Show us your dispatch</h2>
+          <p>This opens an email to info@cycletiger.com. The proposal comes after the review.</p>
         </div>
         <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
       </div>
@@ -328,15 +269,11 @@
           <input id="email" name="email" type="email" autocomplete="email" required />
         </div>
         <div class="field">
-          <label for="fleet">Power units</label>
-          <input id="fleet" name="fleet" type="text" inputmode="numeric" placeholder="For example, 25" />
-        </div>
-        <div class="field">
-          <label for="note">How you dispatch today</label>
+          <label for="note">What breaks between the call and the invoice</label>
           <textarea id="note" name="note" placeholder="How a load is accepted, how a truck is chosen, how the invoice is sent."></textarea>
         </div>
         <p class="form-error" data-form-error hidden>Enter a name, a company, and a valid email.</p>
-        <button class="btn btn-blue" type="submit">Email this request</button>
+        <button class="btn" type="submit">Email this request</button>
         <p class="form-hint">If mail does not open, write to info@cycletiger.com.</p>
       </form>
     </div>
